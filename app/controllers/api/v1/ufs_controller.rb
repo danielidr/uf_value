@@ -1,3 +1,14 @@
+module Api
+  module V1
+      class UfsController < V1Controller
+          def by_date
+              @uf = Uf.find_by(date: params[:date])
+              render json: @uf
+          end
+      end
+  end
+end
+
 class UfsController < ApplicationController
   before_action :set_uf, only: [:show, :update, :destroy]
 
