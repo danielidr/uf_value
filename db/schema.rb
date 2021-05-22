@@ -12,7 +12,7 @@
 
 ActiveRecord::Schema.define(version: 2021_05_22_205402) do
 
-  create_table "queries", force: :cascade do |t|
+  create_table "charges", force: :cascade do |t|
     t.string "client"
     t.integer "quantity"
     t.datetime "created_at", null: false

@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'by_date/:date', to: 'ufs#by_date'
+      get 'client/:client', to: 'ufs#client'
     end
   end
   
