@@ -7,7 +7,8 @@ ruby '2.5.3'
 gem 'rails', '~> 5.2.6'
 gem 'rack-cors'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
