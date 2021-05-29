@@ -7,8 +7,12 @@ module Api
                 render json: 'Date does not exist'
               else
                 client = request.headers['X-Client']
-                Charge.charge_client(client)
-                render json: @uf
+                status = Charge.charge_client(client)
+                if status == 404
+                  render json: "Client not found"
+                else
+                  render json: @uf
+                end
               end
           end
 
